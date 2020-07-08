@@ -88,10 +88,10 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.5
-- 10.0.0.6
-- 10.0.0.7
-- 10.0.0.8
+| 10.0.0.5 |
+| 10.0.0.6 |
+| 10.0.0.7 |
+| 10.0.0.8 |
 
 We have installed the following Beats on these machines:
 - Filebeat
