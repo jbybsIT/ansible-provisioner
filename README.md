@@ -110,6 +110,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 - Run `ansible-playbook filebeat_playbook.yml` and ensure there are no errors.
 - If there are no errors, check `<ELK server dynamic IP>:5601/app/kibana#/dashboard/` and click on add logs, then find the system logs on the bottom right of the screen.
 - Scroll down and look for the check data button. If set up correctly, there should be a sucessful message.
+#
 
 ### A Quick Setup Video
-![How to use Filebeat Playbook](https://youtu.be/jG8R4WIWJ9k)
+![UsingFilebeat.mp4](https://youtu.be/jG8R4WIWJ9k)
