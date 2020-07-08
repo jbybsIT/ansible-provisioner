@@ -88,10 +88,10 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-| 10.0.0.5 |
-| 10.0.0.6 |
-| 10.0.0.7 |
-| 10.0.0.8 |
+- 10.0.0.5
+- 10.0.0.6
+- 10.0.0.7
+- 10.0.0.8
 
 We have installed the following Beats on these machines:
 - Filebeat
@@ -102,16 +102,11 @@ These Beats allow us to collect the following information from each machine:
 #
 
 ### Using the Filebeat Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
-SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+In order to use the playbook, you will need to have an Ansible control node already configured to use your web servers. Assuming you have such a control node provisioned: 
+- Find the filebeat config file inside the Files directory of the ansible directory.
+- Find the `output.elasticsearch` line inside the config and edit the hosts line to be your ELK stack IP address.
+- Find the `setup.kibana` line inside the config and edit the host line to be your ELK stack IP address.
+- Under the copy task of the playbook, insure that the found config about, is pasted into the /etc/filebeat/filebeat.yml file on your web servers.
+- Run `ansible-playbook filebeat_playbook.yml` and ensure there are no errors.
+- If there are no errors, check `<ELK server dynamic IP>:5601/app/kibana#/dashboard/` and click on add logs, then find the system logs on the bottom right of the screen.
+- Scroll down and look for the check data button. If set up correctly, there should be a sucessful message.
