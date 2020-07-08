@@ -113,4 +113,4 @@ In order to use the playbook, you will need to have an Ansible control node alre
 #
 
 ### A Quick Setup Video
-![UsingFilebeat.mp4](https://youtu.be/jG8R4WIWJ9k)
+- [How to use Filebeat (YouTube)](https://youtu.be/jG8R4WIWJ9k)
